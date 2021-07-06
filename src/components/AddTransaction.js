@@ -6,7 +6,7 @@ const AddTransaction = () => {
   const [amount, setAmount] = useState(0);
   const { addTransaction } = useContext(GlobalContext);
 
-  const onSubmit = (e) => {
+  const Submit = (e) => {
     e.preventDefault();
 
     const newTransaction = {
@@ -20,7 +20,7 @@ const AddTransaction = () => {
   return (
     <>
       <h3>Add new transaction</h3>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={Submit}>
         <div className='form-control'>
           <label htmlFor='text'>Text</label>
           <input
